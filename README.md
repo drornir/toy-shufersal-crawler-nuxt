@@ -2,6 +2,14 @@
 
 ## Development
 
+Run the server:
+
+```sh
+npm run dev
+```
+
+## First Time Setup
+
 ### Install Node JS
 
 Install Node. If you don't already have your preferred way, use the below:
@@ -62,3 +70,7 @@ Mac: `brew install awscli`
 Windows: `winget install -e --id Amazon.AWSCLI`
 
 TODO(dror): explain how to create Access Keys, setup local profile
+
+## History
+
+This repo was created by following https://sst.dev/docs/start/aws/nuxt#serverless
