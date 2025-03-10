@@ -13,8 +13,10 @@ export type Playwright = {
   close: () => Promise<void>;
 };
 
-export async function makePlaywright(): Promise<Playwright> {
-  const browser = await chromium.launch();
+export async function makePlaywright(
+  opts: { headless?: boolean } = {},
+): Promise<Playwright> {
+  const browser = await chromium.launch({ headless: opts.headless });
   const context = await browser.newContext(devices["Desktop Chrome"]);
 
   // TODO await context.route('**.jpg', route => route.abort());
