@@ -92,7 +92,7 @@ TODO(dror): explain how to create Access Keys, setup local profile
 
 > This repo was created by following https://sst.dev/docs/start/aws/nuxt#serverless
 
-The [exiting app](https://github.com/DonateIT-ORG/DonateIT) is written wuth [Vue.js](https://vuejs.org/).
+The [exiting app](https://github.com/DonateIT-ORG/DonateIT) is written with [Vue.js](https://vuejs.org/).
 Therefore, this app also uses Vue.
 
 Vue is a javascript **frontend** framework, like React and Angular.
@@ -100,13 +100,11 @@ Vue is a javascript **frontend** framework, like React and Angular.
 [Nuxt](https://nuxt.com/) is a **fullstack** framework that uses Vue as its frontend.
 In other words, Nuxt is a framework for building **servers** that serve webpages written
 in Vue. If you're coming from React, Nuxt is a wrapper for Vue
-like [Next.js](https://nextjs.org/) is a warpper for fullstack React apps.
+like [Next.js](https://nextjs.org/) is a wrapper for fullstack React apps.
 
 [sst.dev](https://sst.dev/) is used for deploying this server to AWS. It simplifies
 a lot of the complexity of working with AWS. Instead of manually managing things on AWS,
-we decalre what we want to have on AWS and SST takes care of figuring out how to make it happen.
+we declare what we want to have on AWS and SST takes care of figuring out how to make it happen.
 
 SST has two types of presets for running Nuxt on AWS: Serverless (AWS Lambda) or
-Containers (AWS ECS). For this project Serverless has clear benefits. We expect very low
-traffic, but we also want to prepare for unexpected spikes in traffic. The fact that SST
-takes care of configuring everything for us eliminates a lot of the friction when using Lambdas.
+Containers (AWS ECS). We'll probably need to use ECS due to how heavy the crawling might be.

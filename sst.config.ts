@@ -9,6 +9,17 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.Nuxt("MyWeb");
+    const vpc = new sst.aws.Vpc("Crawler", { bastion: true });
+    const cluster = new sst.aws.Cluster("Crawler", { vpc });
+
+    new sst.aws.Service("Crawler", {
+      cluster,
+      loadBalancer: {
+        ports: [{ listen: "80/http", forward: "3000/http" }],
+      },
+      dev: {
+        command: "npm run dev",
+      },
+    });
   },
 });
